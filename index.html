@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta
+      name="description"
+      content="用手机麦克风识别气塞咕嘟声，按声纹分离多个发酵罐，推算比重、酒精度和发酵曲线。"
+    />
+    <title>咕嘟酿酒观察站</title>
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">🫧</span>
+          <div>
+            <h1>咕嘟酿酒观察站</h1>
+            <p id="topbar-subtitle">AudioWorklet 气塞声检测 · TS 发酵模型</p>
+          </div>
+        </div>
+        <div id="global-status" class="global-status" aria-live="polite"></div>
+      </header>
+
+      <main id="page-root" class="page-root" tabindex="-1"></main>
+
+      <nav class="bottom-nav" aria-label="主导航">
+        <a href="#/jars" data-route="jars"><span>🫙</span>罐子管理</a>
+        <a href="#/listen" data-route="listen"><span>🎙️</span>夜间监听</a>
+        <a href="#/curves" data-route="curves"><span>📈</span>发酵曲线</a>
+        <a href="#/records" data-route="records"><span>📒</span>酿造记录</a>
+      </nav>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
